@@ -6,7 +6,10 @@ import mesop as me
 import mesop.labs as mel
 
 llm = ChatOpenAI(
-    model="llama3.1", openai_api_key="NA", base_url="http://localhost:11434/v1"
+    model="llama3.1:latest",  # Use the full model ID
+    provider="ollama",
+    base_url="http://localhost:11434/v1",
+    openai_api_key="NA"  # API key is optional for Ollama
 )
 
 
